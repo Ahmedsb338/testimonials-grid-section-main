@@ -1,0 +1,165 @@
+/* Start Global Rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+}
+/* End Global Rules  */
+/* Start Variables */
+:root {
+    /* Primary Color */
+    --ModerateViolet: hsl(263, 55%, 52%);
+    --VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+    --VeryDarkBlackishBlue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --paragraphColor: rgb(97, 97, 97);
+    /* Neutral Color */
+    --LightGray: hsl(0, 0%, 81%);
+    --LightGrayishBlue: hsl(210, 46%, 95%);
+}
+/* End Variables */
+/* Start container */
+.container {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: hsl(210, 46%, 95%);
+}
+/* End container */
+/* Start Grid */
+.grid {
+    display: grid;
+    grid-template-areas: "Daniel Daniel Jonathan Kira" "Jeanette Patrick Patrick Kira";
+    gap: 30px;
+}
+@media (max-width: 767px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .grid {
+        grid-template-areas: "Daniel" "Jonathan" "Jeanette" "Patrick" "Kira";
+    }
+}
+.one {
+    grid-area: Daniel;
+    background-color: var(--ModerateViolet);
+    background-image: url('../images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: 75% 0%;
+}
+.two {
+    grid-area: Jonathan;
+    background-color: var(--VeryDarkGrayishBlue);
+}
+.three {
+    grid-area: Jeanette;
+    background-color: var(--White);
+    box-shadow: 0px 5px 12px hsl(0, 0%, 65%);
+}
+.four {
+    grid-area: Patrick;
+    background-color: var(--VeryDarkBlackishBlue);
+}
+.five {
+    grid-area: Kira;
+    background-color: var(--LightGrayishBlue);
+    box-shadow: 0px 5px 12px hsl(0, 0%, 65%);
+}
+/* End Grid */
+/* Start Article */
+article {
+    padding: 30px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+article .box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+article .box .image img {
+    width: 35px;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+article .box .text h3 {
+    font-weight: 600;
+    color: var(--White);
+    margin-bottom: 5px;
+}
+article.three .box .text h3,
+article.five .box .text h3 {
+    color: #000;
+}
+article > p:first-of-type {
+    line-height: 1.4;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+article > p:last-of-type {
+    line-height: 1.6;
+}
+/* Article One */
+.one .text > p,
+.one > p:last-of-type {
+    color: var(--LightGray);
+}
+.one > p:first-of-type {
+    color: var(--White);
+}
+/* Article Two */
+.two .text > p,
+.two > p:last-of-type {
+    color: var(--LightGray);
+}
+.two > p:first-of-type {
+    color: var(--White);
+}
+/* Article Three */
+.three .text > p,
+.three > p:last-of-type {
+    color: var(--paragraphColor);
+}
+.three > p:first-of-type {
+    color: hsl(0, 0%, 0%);
+}
+/* Article Four */
+.four .text > p,
+.four > p:last-of-type {
+    color: var(--LightGray);
+}
+.four > p:first-of-type {
+    color: var(--White);
+}
+/* Article Five */
+.five .text > p,
+.five > p:last-of-type {
+    color: var(--paragraphColor);
+}
+.five > p:first-of-type {
+    color: hsl(0, 0%, 0%);
+}
+/* End Article */
